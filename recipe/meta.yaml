@@ -38,11 +38,12 @@ test:
 about:
   home: https://github.com/aio-libs/yarl
   license: Apache 2.0
+  license_family: Apache
   license_file: LICENSE
-  summary: 'Yet another URL library'
-
-  doc_url: http://yarl.readthedocs.io/
+  summary: Yet another URL library
+  doc_url: http://yarl.readthedocs.io
   dev_url: https://github.com/aio-libs/yarl
+  doc_source_url: https://github.com/aio-libs/yarl/tree/master/docs
 
 extra:
   recipe-maintainers:
