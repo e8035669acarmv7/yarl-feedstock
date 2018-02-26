@@ -1,6 +1,6 @@
 {% set name = "yarl" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "d92947434946bf47e3ee2123f4ea785ea4c7d5ba37c93fd2142470868dc2a01b" %}
+{% set version = "0.18.0" %}
+{% set sha256 = "baa0d3f7982fa0c03a55433109c405e79a597141f2e2d6ee7e16c03eabd74886" %}
 
 package:
   name: {{ name|lower }}
@@ -23,6 +23,7 @@ requirements:
   run:
     - python
     - multidict >=2.0
+    - idna >=2.0
 
 test:
   source_files:
