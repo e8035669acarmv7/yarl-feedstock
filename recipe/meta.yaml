@@ -1,6 +1,6 @@
 {% set name = "yarl" %}
-{% set version = "0.18.0" %}
-{% set sha256 = "baa0d3f7982fa0c03a55433109c405e79a597141f2e2d6ee7e16c03eabd74886" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "5ea610467a04d99bfc8878186330b28859eafc6ca589cdd24ba6fb7234c4b011" %}
 
 package:
   name: {{ name|lower }}
@@ -23,7 +23,7 @@ requirements:
     - toolchain
   run:
     - python
-    - multidict >=2.0
+    - multidict >=4.0
     - idna >=2.0
 
 test:
