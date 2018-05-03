@@ -1,6 +1,6 @@
 {% set name = "yarl" %}
-{% set version = "1.2.2" %}
-{% set sha256 = "a3bd7788294d7e1ad6bb34afb18ee4dba9f94536e4ca58f8b0fe4d6625e51ffb" %}
+{% set version = "1.2.3" %}
+{% set sha256 = "1fc3e17ab13e46cae1a6067ad4c210d6efa378267d312ed6a47803d0e5ca0d97" %}
 
 package:
   name: {{ name|lower }}
