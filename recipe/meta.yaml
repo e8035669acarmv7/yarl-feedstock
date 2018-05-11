@@ -1,6 +1,6 @@
 {% set name = "yarl" %}
-{% set version = "1.2.3" %}
-{% set sha256 = "1fc3e17ab13e46cae1a6067ad4c210d6efa378267d312ed6a47803d0e5ca0d97" %}
+{% set version = "1.2.4" %}
+{% set sha256 = "437c51e7e31d9fa462ad99f829fb8282eccba836d67868ab61a513d20ec467b7" %}
 
 package:
   name: {{ name|lower }}
@@ -13,14 +13,15 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
   skip: true  # [py2k]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
-    - setuptools
-    - toolchain
+    - pip
   run:
     - python
     - multidict >=4.0
