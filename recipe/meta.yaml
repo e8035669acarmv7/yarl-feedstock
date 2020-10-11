@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://github.com/aio-libs/yarl
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
   summary: Yet another URL library
