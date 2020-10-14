@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py2k]
 
@@ -26,14 +26,17 @@ requirements:
     - python
     - multidict >=4.0
     - idna >=2.0
+    - typing-extensions >=3.7.4  # [py<38]
 
 test:
   source_files:
     - tests
   requires:
     - pytest
+    - pip
   commands:
     - py.test tests
+    - pip check
 
 about:
   home: https://github.com/aio-libs/yarl
@@ -48,3 +51,4 @@ about:
 extra:
   recipe-maintainers:
     - sodre
+    - xhochy
