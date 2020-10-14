@@ -33,8 +33,10 @@ test:
     - tests
   requires:
     - pytest
+    - pip
   commands:
     - py.test tests
+    - pip check
 
 about:
   home: https://github.com/aio-libs/yarl
@@ -49,3 +51,4 @@ about:
 extra:
   recipe-maintainers:
     - sodre
+    - xhochy
