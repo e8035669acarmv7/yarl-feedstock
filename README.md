@@ -229,4 +229,5 @@ Feedstock Maintainers
 =====================
 
 * [@sodre](https://github.com/sodre/)
+* [@xhochy](https://github.com/xhochy/)
 
