@@ -1,20 +1,18 @@
 {% set name = "yarl" %}
-{% set version = "1.6.2" %}
-{% set sha256 = "c45b49b59a5724869899798e1bbd447ac486215269511d3b76b4c235a1b766b6" %}
+{% set version = "1.5.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: c22c75b5f394f3d47105045ea551e08a3e804dc7e01b37800ca35b58f856c3d6
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py2k]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -24,8 +22,8 @@ requirements:
     - pip
   run:
     - python
-    - multidict >=4.0
     - idna >=2.0
+    - multidict >=4.0
     - typing-extensions >=3.7.4  # [py<38]
 
 test:
