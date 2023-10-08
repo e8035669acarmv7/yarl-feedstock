@@ -8,9 +8,12 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 04ab9d4b9f587c06d801c2abfe9317b77cdf996c65a90d5e84ecc45010823571
+  patches:
+    # backport https://github.com/aio-libs/yarl/pull/882
+    - patches/0001-Correct-square-bracket-handling-in-URL-netloc-882.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
