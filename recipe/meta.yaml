@@ -1,5 +1,5 @@
 {% set name = "yarl" %}
-{% set version = "1.9.2" %}
+{% set version = "1.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 04ab9d4b9f587c06d801c2abfe9317b77cdf996c65a90d5e84ecc45010823571
+  sha256: 4a14907b597ec55740f63e52d7fee0e9ee09d5b9d57a4f399a7423268e457b57
   patches:
     # backport https://github.com/aio-libs/yarl/pull/882
     - patches/0001-Correct-square-bracket-handling-in-URL-netloc-882.patch
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
