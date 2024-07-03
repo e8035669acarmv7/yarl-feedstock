@@ -1,5 +1,5 @@
 {% set name = "yarl" %}
-{% set version = "1.9.2" %}
+{% set version = "1.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 04ab9d4b9f587c06d801c2abfe9317b77cdf996c65a90d5e84ecc45010823571
+  sha256: 566db86717cf8080b99b58b083b773a908ae40f06681e87e589a976faf8246bf
 
 build:
   number: 0
@@ -15,12 +15,16 @@ build:
 
 requirements:
   build:
+    - cython                                 # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
     - pip
+    - expandvars
+    - tomli  # [py<311]
+    - cython
   run:
     - python
     - multidict >=4.0
